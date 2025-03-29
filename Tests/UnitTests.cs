@@ -126,9 +126,7 @@ public class Power
 	{
 		Assert.AreEqual(8, Program.Power("2", "3"));
 		Assert.AreEqual(1, Program.Power("5", "0"));
-
-		// Intentional failure: 2^-2 should be 0.25, but I'm asserting 0.5 instead
-		Assert.AreEqual(0.5, Program.Power("2", "-2")); 
+		Assert.AreEqual(0.25, Program.Power("2", "-2")); 
 	}
 
 	[TestMethod]

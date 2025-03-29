@@ -78,14 +78,20 @@ public class Program
 		return double.Parse(x) * double.Parse(y);
 	}
 
-	public static double Divide(string x, string y)
+	public static double Divide(string a, string b)
 	{
-		return double.Parse(x) / double.Parse(y);
+    		double num1 = double.Parse(a);
+    		double num2 = double.Parse(b);
+    		if (num2 == 0)
+    		{
+        		throw new DivideByZeroException();
+    		}
+    		return num1 / num2;
 	}
 
 	// Implement this method following a similar pattern as above
 	public static double Power(string x, string y)
 	{
-		return 0.0;
+		return Math.Pow(double.Parse(x), double.Parse(y));
 	}
 }
